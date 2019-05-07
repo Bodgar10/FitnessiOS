@@ -7,19 +7,84 @@
 //
 
 import UIKit
+import Firebase
+import UserNotifications
 import CoreData
+import GoogleMaps
+import GooglePlaces
+import FBSDKCoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "", PayPalEnvironmentSandbox: ""])
+        
+        GMSServices.provideAPIKey("AIzaSyBlabGOCKWHlzatjuB_LeuDVWD07FoWt2k")
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyAu8n9xHtpZd4uQpHwmYuELNLfVue4Q1dc")
+        
+        
+        UIApplication
+            .shared.setStatusBarStyle(.lightContent, animated: true)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.737254902, green: 0, blue: 0.09803921569, alpha: 1)
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        //UINavigationBar.appearance().shadowImage = UIColor.black.as1ptImage()
+        
+        UITabBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.737254902, green: 0, blue: 0.09803921569, alpha: 1)
+        
+        //UINavigationBar.appearance().barStyle = .default
+        
+        if let barFont = UIFont(name: "Avenir-Light", size: 20) {
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: barFont]
+        }
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, _) in}
+            //application.registerForRemoteNotifications()
+            Messaging.messaging().delegate = self
+            
+        } else {
+            
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        application.registerForRemoteNotifications()
+        
+        FirebaseApp.configure()
+        
+        let token = InstanceID.instanceID().token()
+        
+        print("TOKEN: \(String(describing: token))")
+        
+        let state = UIApplication.shared.applicationState
+        
+        if state == .background {
+            print("SALIMOOOOOS")
+            // background
+        }
+        else if state == .active {
+            print("ENTRAMOOOOOOS")
+            // foreground
+        }
         // Override point for customization after application launch.
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
