@@ -15,12 +15,18 @@ class Usuarios{
     var email_usuario: String!
     var contrasena_usuario: String!
     var foto_usuario: String!
+    var id_usuario: String!
+    var token_usuario: String!
+    var tipo_usuario: String!
     
-    init(nombre_usuario: String, telefono_usuario: String, email_usuario: String, contrasena_usuario: String, foto_usuario: String){
+    init(nombre_usuario: String, telefono_usuario: String, email_usuario: String, contrasena_usuario: String, foto_usuario: String, id_usuario: String, token_usuario: String, tipo_usuario: String){
         self.nombre_usuario = nombre_usuario
         self.telefono_usuario = telefono_usuario
         self.email_usuario = email_usuario
         self.contrasena_usuario = contrasena_usuario
         self.foto_usuario = foto_usuario
+        self.id_usuario = id_usuario
+        self.token_usuario = token_usuario
+        self.tipo_usuario = tipo_usuario
     }
 }
