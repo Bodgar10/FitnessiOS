@@ -12,7 +12,9 @@
 		2300FCF52281B574005EDCD1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300FCF12281B573005EDCD1 /* RoundButton.swift */; };
 		2300FCF62281B574005EDCD1 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300FCF22281B574005EDCD1 /* RoundTextField.swift */; };
 		2300FCF72281B574005EDCD1 /* RoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2300FCF32281B574005EDCD1 /* RoundTextView.swift */; };
+		23100BAC2285A4CC006B7651 /* RegistroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23100BAB2285A4CC006B7651 /* RegistroVC.swift */; };
 		2314CD7A228451C70025EFFA /* BajarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314CD79228451C70025EFFA /* BajarInfo.swift */; };
+		23665AF62285212F00209AB4 /* IniciarSesionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23665AF52285212F00209AB4 /* IniciarSesionVC.swift */; };
 		2389EBF3227F6099009648A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389EBF2227F6099009648A9 /* AppDelegate.swift */; };
 		2389EBF5227F6099009648A9 /* PantallaPrincipalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389EBF4227F6099009648A9 /* PantallaPrincipalVC.swift */; };
 		2389EBF8227F6099009648A9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2389EBF6227F6099009648A9 /* Login.storyboard */; };
@@ -31,7 +33,9 @@
 		2300FCF12281B573005EDCD1 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		2300FCF22281B574005EDCD1 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		2300FCF32281B574005EDCD1 /* RoundTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextView.swift; sourceTree = "<group>"; };
+		23100BAB2285A4CC006B7651 /* RegistroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroVC.swift; sourceTree = "<group>"; };
 		2314CD79228451C70025EFFA /* BajarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BajarInfo.swift; sourceTree = "<group>"; };
+		23665AF52285212F00209AB4 /* IniciarSesionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciarSesionVC.swift; sourceTree = "<group>"; };
 		2389EBEF227F6099009648A9 /* Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2389EBF2227F6099009648A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2389EBF4227F6099009648A9 /* PantallaPrincipalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPrincipalVC.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				2389EBF4227F6099009648A9 /* PantallaPrincipalVC.swift */,
+				23665AF52285212F00209AB4 /* IniciarSesionVC.swift */,
+				23100BAB2285A4CC006B7651 /* RegistroVC.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2300FCF52281B574005EDCD1 /* RoundButton.swift in Sources */,
+				23100BAC2285A4CC006B7651 /* RegistroVC.swift in Sources */,
 				2389EBF5227F6099009648A9 /* PantallaPrincipalVC.swift in Sources */,
+				23665AF62285212F00209AB4 /* IniciarSesionVC.swift in Sources */,
 				2389EBFB227F6099009648A9 /* Fitness.xcdatamodeld in Sources */,
 				2300FCF62281B574005EDCD1 /* RoundTextField.swift in Sources */,
 				2389EBF3227F6099009648A9 /* AppDelegate.swift in Sources */,

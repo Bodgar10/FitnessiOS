@@ -37,4 +37,41 @@ class SubirInfo{
                                   Constantes.TIPO_USUARIO: tipo_usuario]
         tablaUsuarios.child(id_usuario).updateChildValues(data)
     }
+    
+    func cambiarTipo(tipo_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.TIPO_USUARIO: tipo_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarToken(token_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.TOKEN_USUARIO: token_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarFoto(foto_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.FOTO_USUARIO: foto_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarContrasena(contrasena_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.CONTRASENA_USUARIO: contrasena_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarEmail(email_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.EMAIL_USUARIO: email_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarTelefono(telefono_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.TELEFONO_USUARIO: telefono_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    func cambiarNombre(nombre_usuario: String, id_usuario: String){
+        let data: [String:Any] = [Constantes.NOMBRE_USUARIO: nombre_usuario]
+        tablaUsuarios.child(id_usuario).updateChildValues(data)
+    }
+    
+    
 }

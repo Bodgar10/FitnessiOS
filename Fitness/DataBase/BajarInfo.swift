@@ -59,7 +59,7 @@ class BajarInfo {
                         let foto = data[Constantes.FOTO_USUARIO] as? String,
                         let id_usuario = data[Constantes.ID_USUARIO] as? String{
                         if let token = data[Constantes.TOKEN_USUARIO] as? String,
-                            let tipo = data[Constantes.TIPO_USUARIO] as? String{
+                            let tipo = data[Constantes.TIPO_USUARIO] as? String {
                             completion(Usuarios(nombre_usuario: nombre, telefono_usuario: telefono, email_usuario: email, contrasena_usuario: contrasena, foto_usuario: foto, id_usuario: id_usuario, token_usuario: token, tipo_usuario: tipo))
                         }else{
                             print("USUARIO 4")
