@@ -75,5 +75,32 @@ class BajarInfo {
             }
         }
     }
+    
+    func bajarFeed(completion: @escaping (Feed) -> Void){
+        SubirInfo.Instance.tablaUsuarios.observe(.childAdded) { (snapshot) in
+            if let data = snapshot.value as? NSDictionary{
+                if let tipo_feed = data[Constantes.TIPO_FEED] as? String,
+                    let is_gratis = data[Constantes.IS_GRATIS] as? Bool,
+                    let imagen_feed = data[Constantes.IMAGEN_FEED] as? String{
+                    if let costo_pdf = data[Constantes.COSTO_PDF] as? String,
+                        let url_tipo = data[Constantes.URL_TIPO] as? String,
+                        let timestamp = data[Constantes.TIMESTAMP] as? String,
+                        let descripcion = data[Constantes.DESCRIPCION] as? String{
+                        BajarInfo.Instance.bajarUsuarios(completion: { (usuario) in
+                            if usuario.tipo_usuario == Constantes.ADMIN{
+                                completion(Feed(tipo_feed: tipo_feed, is_gratis: is_gratis, imagen_feed: imagen_feed, costo_pdf: costo_pdf, url_tipo: url_tipo, imagen_admin: usuario.foto_usuario, nombre_admin: usuario.nombre_usuario, timestamp: timestamp, descripcion: descripcion))
+                            }
+                        })
+                    }else{
+                        print("FEED 3")
+                    }
+                }else{
+                    print("FEED 2")
+                }
+            }else{
+                print("FEED 1")
+            }
+        }
+    }
 
 }

@@ -27,6 +27,20 @@ class Constantes{
     public static let MESSAGE_OK = "ok"
     public static let MESSAGE_FAIL = "fail"
     
+    public static let TABLA_FEED = "tabla_feed"
+    public static let TIPO_FEED = "tipo_feed"
+    public static let IS_GRATIS = "is_gratis"
+    public static let IMAGEN_FEED = "imagen_feed"
+    public static let COSTO_PDF = "costo_pdf"
+    public static let URL_TIPO = "url_tipo"
+    public static let TIMESTAMP = "timestamp"
+    public static let DESCRIPCION = "descripcion"
+    
+    public static let VIDEO = "video"
+    public static let PDF = "pdf"
+    public static let IMAGEN = "imagen"
+    
+    
     
     
 }

@@ -60,7 +60,7 @@ class RegistroVC: UIViewController {
             BajarInfo.Instance.register(nombre_usuario: nombre, telefono_usuario: telefono, email_usuario: email, contrasena_usuario: contrasena, foto_usuario: "nil", id_usuario: "nil", token_usuario: self.token, tipo_usuario: Constantes.USUARIO) { (mensaje) in
                 if mensaje == Constantes.MESSAGE_OK{
                     self.endActivityIndicator()
-                    let storyboard = UIStoryboard(name: "Inicio", bundle: nil)
+                    let storyboard = UIStoryboard(name: "Feed", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: self.SEGUE_OMITIR)
                     let modalStyle: UIModalTransitionStyle = UIModalTransitionStyle.flipHorizontal
                     vc.modalTransitionStyle = modalStyle

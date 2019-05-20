@@ -40,7 +40,7 @@ class PantallaPrincipalVC: UIViewController {
                         self.present(vc, animated: true, completion: nil)
                     }else{
                         self.endActivityIndicator()
-                        let storyboard = UIStoryboard(name: "Inicio", bundle: nil)
+                        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
                         let vc = storyboard.instantiateViewController(withIdentifier: self.SEGUE_OMITIR)
                         let modalStyle: UIModalTransitionStyle = UIModalTransitionStyle.flipHorizontal
                         vc.modalTransitionStyle = modalStyle

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="KGk-i7-Jjw" customClass="videoFeedTVCell" customModule="Fitness" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eeq-5z-pnX">
+                        <rect key="frame" x="8" y="8" width="304" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="044-6m-T9W">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7tJ-aY-5i2"/>
+                                    <constraint firstAttribute="width" constant="40" id="wbV-BA-DCr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bodgar Jair Espinosa Miranda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-Yh-d1N">
+                                <rect key="frame" x="48" y="0.0" width="168" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hace 3 horas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3p-ef-fEJ">
+                                <rect key="frame" x="224" y="0.0" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="EjH-cc-Der"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-L7-XXO" customClass="RoundView" customModule="Fitness" customModuleProvider="target">
+                        <rect key="frame" x="8" y="56" width="304" height="177.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S7y-Jz-167">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="wP6-zQ-qQO"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAc-jd-yD1" customClass="RoundView" customModule="Fitness" customModuleProvider="target">
+                                <rect key="frame" x="112" y="106.5" width="80" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWo-6n-zK3">
+                                        <rect key="frame" x="8" y="8" width="64" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NjE-2A-hdk"/>
+                                    <constraint firstAttribute="trailing" secondItem="FWo-6n-zK3" secondAttribute="trailing" constant="8" id="bgB-vm-0th"/>
+                                    <constraint firstItem="FWo-6n-zK3" firstAttribute="leading" secondItem="JAc-jd-yD1" secondAttribute="leading" constant="8" id="dvd-g5-G6k"/>
+                                    <constraint firstAttribute="height" constant="30" id="ejU-zN-84s"/>
+                                    <constraint firstAttribute="bottom" secondItem="FWo-6n-zK3" secondAttribute="bottom" constant="8" id="nMW-ef-1ir"/>
+                                    <constraint firstItem="FWo-6n-zK3" firstAttribute="top" secondItem="JAc-jd-yD1" secondAttribute="top" constant="8" id="yY3-Nm-NZt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On a trip to America, looking for someone to join me on this epic journey through American" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zLN-1A-oMa">
+                                <rect key="frame" x="8" y="138.5" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="rKb-x8-dBM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zLN-1A-oMa" firstAttribute="top" secondItem="JAc-jd-yD1" secondAttribute="bottom" constant="2" id="CzS-Jx-tbE"/>
+                            <constraint firstItem="S7y-Jz-167" firstAttribute="top" secondItem="YqL-L7-XXO" secondAttribute="top" id="Dhe-30-nuj"/>
+                            <constraint firstAttribute="trailing" secondItem="zLN-1A-oMa" secondAttribute="trailing" constant="8" id="Rih-it-e1t"/>
+                            <constraint firstAttribute="bottom" secondItem="zLN-1A-oMa" secondAttribute="bottom" constant="4" id="bgp-fG-Xa2"/>
+                            <constraint firstItem="JAc-jd-yD1" firstAttribute="centerX" secondItem="YqL-L7-XXO" secondAttribute="centerX" id="kEy-RI-W6r"/>
+                            <constraint firstAttribute="trailing" secondItem="S7y-Jz-167" secondAttribute="trailing" id="kbP-L9-ymT"/>
+                            <constraint firstItem="S7y-Jz-167" firstAttribute="leading" secondItem="YqL-L7-XXO" secondAttribute="leading" id="n8z-88-cEy"/>
+                            <constraint firstItem="zLN-1A-oMa" firstAttribute="leading" secondItem="YqL-L7-XXO" secondAttribute="leading" constant="8" id="ooZ-CX-eSY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="YqL-L7-XXO" secondAttribute="trailing" constant="8" id="Aeu-ca-bCj"/>
+                    <constraint firstAttribute="trailing" secondItem="eeq-5z-pnX" secondAttribute="trailing" constant="8" id="Mcb-7i-TgE"/>
+                    <constraint firstAttribute="bottom" secondItem="YqL-L7-XXO" secondAttribute="bottom" constant="16" id="WQ3-nW-l4v"/>
+                    <constraint firstItem="eeq-5z-pnX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bvY-Qb-bZY"/>
+                    <constraint firstItem="YqL-L7-XXO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nHT-at-MlC"/>
+                    <constraint firstItem="YqL-L7-XXO" firstAttribute="top" secondItem="eeq-5z-pnX" secondAttribute="bottom" constant="8" id="v3b-go-EMB"/>
+                    <constraint firstItem="eeq-5z-pnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="z8H-jm-amC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="zLN-1A-oMa" id="i6D-cK-Xnb"/>
+                <outlet property="imageProfileAdmin" destination="044-6m-T9W" id="DRb-qY-ZWM"/>
+                <outlet property="imageVideo" destination="S7y-Jz-167" id="0Id-2x-R7M"/>
+                <outlet property="nameProfileAdmin" destination="qlV-Yh-d1N" id="3qm-RA-DKL"/>
+                <outlet property="timeStampLabel" destination="Y3p-ef-fEJ" id="pEb-A3-F69"/>
+                <outlet property="videoPdf" destination="FWo-6n-zK3" id="BgG-GT-MdX"/>
+                <outlet property="viewPdf" destination="JAc-jd-yD1" id="Jvm-DC-ePW"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="93.553223388305852"/>
+        </tableViewCell>
+    </objects>
+</document>

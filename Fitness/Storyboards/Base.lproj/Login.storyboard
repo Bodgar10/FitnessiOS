@@ -78,12 +78,13 @@
                         <outlet property="iniciarSesionBtn" destination="4b1-mL-Fss" id="fQA-mW-wLb"/>
                         <outlet property="omitirBtn" destination="gRX-2L-xYT" id="Jme-h0-7bb"/>
                         <outlet property="registrarseBtn" destination="1id-5p-Dds" id="tqD-lV-Jea"/>
-                        <segue destination="HkH-BP-m0Q" kind="show" id="iQR-hy-qxa"/>
-                        <segue destination="fZI-wg-mYg" kind="show" id="tj1-el-FU4"/>
+                        <segue destination="HkH-BP-m0Q" kind="show" identifier="login" id="iQR-hy-qxa"/>
+                        <segue destination="fZI-wg-mYg" kind="show" identifier="registro" id="tj1-el-FU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="54" y="27"/>
         </scene>
         <!--RegistroVC-->
         <scene sceneID="X6c-Ja-GgG">
@@ -366,6 +367,7 @@
                         <outlet property="nombreTextField" destination="IiR-pB-F4i" id="HQq-jq-uoM"/>
                         <outlet property="registrarmeView" destination="Wdj-8I-L3m" id="lj6-cO-gOA"/>
                         <outlet property="telefonoTextField" destination="ogD-xb-L04" id="ubl-FX-DL8"/>
+                        <segue destination="fZI-wg-mYg" kind="show" identifier="registro" id="2be-1O-0sx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpF-N4-v2T" sceneMemberID="firstResponder"/>
@@ -567,11 +569,16 @@
                         <outlet property="emailTextField" destination="99a-b7-1bJ" id="6La-pz-6OX"/>
                         <outlet property="iniciarSesionView" destination="P4w-Fl-dmP" id="yW0-qY-PDt"/>
                         <outlet property="registrarmeView" destination="UjK-XB-jPq" id="xfG-Qa-eeI"/>
+                        <segue destination="HkH-BP-m0Q" kind="show" identifier="login" id="vd2-4T-zH0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-OF-tOf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="741.67916041979015"/>
+            <point key="canvasLocation" x="54" y="748"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tj1-el-FU4"/>
+        <segue reference="iQR-hy-qxa"/>
+    </inferredMetricsTieBreakers>
 </document>

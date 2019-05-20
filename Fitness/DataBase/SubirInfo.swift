@@ -26,7 +26,22 @@ class SubirInfo{
     var tablaUsuarios: DatabaseReference{
         return dbRef.child(Constantes.TABLA_USUARIOS)
     }
+    
+    var tablaFeed: DatabaseReference{
+        return dbRef.child(Constantes.TABLA_FEED)
+    }
 
+    func crearFeed(tipo_feed: String, is_gratis: Bool, imagen_feed: String, costo_pdf: String, url_tipo: String,timestamp: String, descripcion: String){
+        let data: [String:Any] = [Constantes.TIPO_FEED: tipo_feed,
+                                  Constantes.IS_GRATIS: is_gratis,
+                                  Constantes.IMAGEN_FEED: imagen_feed,
+                                  Constantes.COSTO_PDF: costo_pdf,
+                                  Constantes.URL_TIPO: url_tipo,
+                                  Constantes.TIMESTAMP: timestamp,
+                                  Constantes.DESCRIPCION: descripcion]
+        tablaFeed.childByAutoId().updateChildValues(data)
+    }
+    
     func crearUsuario(nombre_usuario: String, telefono_usuario: String, email_usuario: String, contrasena_usuario: String, foto_usuario: String, id_usuario: String, token_usuario: String, tipo_usuario: String){
         let data: [String:Any] = [Constantes.NOMBRE_USUARIO: nombre_usuario,
                                   Constantes.TELEFONO_USUARIO: telefono_usuario,
