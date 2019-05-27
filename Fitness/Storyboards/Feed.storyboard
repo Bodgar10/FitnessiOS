@@ -422,10 +422,10 @@
             </objects>
             <point key="canvasLocation" x="711" y="-151"/>
         </scene>
-        <!--Menu Sin LoginVC-->
+        <!--Menu Con LoginVC-->
         <scene sceneID="fUB-yU-WqU">
             <objects>
-                <viewController id="bZC-1O-ntH" customClass="MenuSinLoginVC" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bZC-1O-ntH" customClass="MenuConLoginVC" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydd-ls-t1y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,6 +466,9 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sae-ea-DSE">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
+                                                        <connections>
+                                                            <action selector="didPressTab:" destination="bZC-1O-ntH" eventType="touchUpInside" id="B2s-8W-QaG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -495,7 +498,7 @@
                                                 <rect key="frame" x="91" y="0.0" width="86" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OJy-5p-hwe">
-                                                        <rect key="frame" x="10" y="12.5" width="66" height="25"/>
+                                                        <rect key="frame" x="2" y="12.5" width="82.5" height="25"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kY-nj-PaE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -504,8 +507,8 @@
                                                                     <constraint firstAttribute="width" constant="25" id="jBo-KV-YtF"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APX-0I-WcP">
-                                                                <rect key="frame" x="30" y="0.0" width="36" height="25"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asesoría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APX-0I-WcP">
+                                                                <rect key="frame" x="30" y="0.0" width="52.5" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -519,8 +522,11 @@
                                                             <constraint firstAttribute="width" constant="25" id="mpW-2N-Ne6"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np1-Kw-1rU">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np1-Kw-1rU">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
+                                                        <connections>
+                                                            <action selector="didPressTab:" destination="bZC-1O-ntH" eventType="touchUpInside" id="aZj-0s-TcI"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -550,7 +556,7 @@
                                                 <rect key="frame" x="182" y="0.0" width="86" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g1L-GG-mgZ">
-                                                        <rect key="frame" x="10" y="12.5" width="66" height="25"/>
+                                                        <rect key="frame" x="12" y="12.5" width="62" height="25"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-Of-ztV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -559,8 +565,8 @@
                                                                     <constraint firstAttribute="width" constant="25" id="u3S-G8-zCT"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-NF-lVN">
-                                                                <rect key="frame" x="30" y="0.0" width="36" height="25"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-NF-lVN">
+                                                                <rect key="frame" x="30" y="0.0" width="32" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -574,8 +580,11 @@
                                                             <constraint firstAttribute="width" constant="25" id="jqU-jg-8jQ"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcQ-Q3-F3r">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcQ-Q3-F3r">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
+                                                        <connections>
+                                                            <action selector="didPressTab:" destination="bZC-1O-ntH" eventType="touchUpInside" id="Jov-W0-ukl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -612,7 +621,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-cc-btI">
-                                                        <rect key="frame" x="12" y="12.5" width="62" height="25"/>
+                                                        <rect key="frame" x="13.5" y="12.5" width="59" height="25"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-ZM-FJW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -621,16 +630,19 @@
                                                                     <constraint firstAttribute="height" constant="25" id="vEm-4C-YgH"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-WC-qle">
-                                                                <rect key="frame" x="30" y="0.0" width="32" height="25"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYN-WC-qle">
+                                                                <rect key="frame" x="30" y="0.0" width="29" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsU-Gd-i9I">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsU-Gd-i9I">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
+                                                        <connections>
+                                                            <action selector="didPressTab:" destination="bZC-1O-ntH" eventType="touchUpInside" id="zTH-mu-mxn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -677,15 +689,27 @@
                         <viewLayoutGuide key="safeArea" id="v1F-x2-jjl"/>
                     </view>
                     <connections>
+                        <outlet property="asesoriaView" destination="f7Y-2b-kbF" id="D4f-GS-rF1"/>
+                        <outlet property="chatView" destination="s8Q-Y6-erh" id="BDi-R4-JE5"/>
                         <outlet property="contentView" destination="eg1-mV-lhM" id="Ycn-re-KcC"/>
                         <outlet property="homeView" destination="JRQ-Qm-D5u" id="UT6-U3-4bo"/>
+                        <outlet property="imageAsesoria" destination="1kY-nj-PaE" id="TL4-ad-Hge"/>
+                        <outlet property="imageAsesoriaEscondido" destination="wRy-V0-uIR" id="0JW-8l-9q6"/>
+                        <outlet property="imageChat" destination="bLp-Of-ztV" id="lQk-X2-jj0"/>
+                        <outlet property="imageChatEscondido" destination="FK5-4f-4Cx" id="1jL-Jd-AYl"/>
                         <outlet property="imageHome" destination="bSS-U6-bhD" id="PpT-R0-i8g"/>
-                        <outlet property="imageHome1" destination="KqU-y3-QHN" id="tbb-wd-Y6c"/>
-                        <outlet property="imagePerfil" destination="KZ9-CC-J2d" id="N5e-uR-bJL"/>
-                        <outlet property="imagePerfil1" destination="Veu-ZM-FJW" id="f9G-uF-i0J"/>
+                        <outlet property="imageHomeEscondido" destination="KqU-y3-QHN" id="oWh-o4-dIW"/>
+                        <outlet property="imagePerfil" destination="Veu-ZM-FJW" id="j1x-wO-s6y"/>
+                        <outlet property="imagePerfilEscondido" destination="KZ9-CC-J2d" id="2LB-Rg-9et"/>
+                        <outlet property="labelAsesoria" destination="APX-0I-WcP" id="K8M-L8-eLT"/>
+                        <outlet property="labelChat" destination="Pr6-NF-lVN" id="WkV-zf-lEi"/>
                         <outlet property="labelHome" destination="n7X-qi-5Kz" id="Voy-0S-Sqm"/>
                         <outlet property="labelPerfil" destination="VYN-WC-qle" id="bnh-kk-s7l"/>
                         <outlet property="perfilView" destination="xg8-wf-eYk" id="L2o-Jq-bdC"/>
+                        <outletCollection property="buttons" destination="sae-ea-DSE" collectionClass="NSMutableArray" id="Cf7-Js-nWv"/>
+                        <outletCollection property="buttons" destination="np1-Kw-1rU" collectionClass="NSMutableArray" id="aId-4t-tiL"/>
+                        <outletCollection property="buttons" destination="CcQ-Q3-F3r" collectionClass="NSMutableArray" id="1O2-R6-nfc"/>
+                        <outletCollection property="buttons" destination="GsU-Gd-i9I" collectionClass="NSMutableArray" id="Kdf-Ky-7jN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgW-C7-fcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
