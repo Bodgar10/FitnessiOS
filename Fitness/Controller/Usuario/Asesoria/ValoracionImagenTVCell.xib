@@ -95,6 +95,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descripcionLabel" destination="FD3-hu-RMH" id="AWc-6V-2Kz"/>
+                <outlet property="fechaPerfil" destination="3cz-aQ-keX" id="Yon-VW-nvb"/>
+                <outlet property="fotoPerfil" destination="Fgs-ec-mFy" id="rJF-yz-ODw"/>
+                <outlet property="imagenAntes" destination="1ju-vD-ofG" id="X2N-Q0-BO7"/>
+                <outlet property="imagenDespues" destination="XQL-k8-6FC" id="65Q-yb-QbM"/>
+                <outlet property="nombrePerfil" destination="TE9-LF-7u9" id="x4k-J1-VJh"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="245.57721139430288"/>
         </tableViewCell>
     </objects>

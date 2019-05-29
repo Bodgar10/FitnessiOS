@@ -40,7 +40,23 @@ class Constantes{
     public static let PDF = "pdf"
     public static let IMAGEN = "imagen"
     
+    public static let TABLA_ASESORIA_INFO = "asesoria_info"
+    public static let ID_ASESORIA = "id_asesoria"
+    public static let IMAGEN_PORTADA = "imagen_portada"
+    public static let DESCRIPCION_ASESORIA = "descripcion_asesoria"
+    public static let COSTO_ASESORIA = "costo_asesoria"
+    public static let VIDEO_EXPLICATIVO = "video_explicativo"
+    public static let RUTINAS_IMAGEN = "rutinas_imagen"
+    public static let RUTINAS_DESCRIPCION = "rutinas_descripcion"
+    public static let ALIMENTOS_IMAGEN = "alimentos_imagen"
+    public static let ALIMENTOS_DESCRIPCION = "alimentos_descripcion"
     
-    
-    
+    public static let TABLA_VALORACIONES_ASESORIA = "valoraciones_asesoria"
+    public static let ID_VALORACION = "id_valoracion"
+    public static let DESCRIPCION_VALORACION = "descripcion_valoracion"
+    public static let ID_USUARIO_VALORACION = "nombre_usuario_valoracion"
+    public static let FECHA_VALORACION = "fecha_valoracion"
+    public static let IMAGEN_ANTES = "imagen_antes"
+    public static let IMAGEN_DESPUES = "imagen_despues"
+    public static let VALORACION = "valoracion"
 }

@@ -77,7 +77,7 @@ class BajarInfo {
     }
     
     func bajarFeed(completion: @escaping (Feed) -> Void){
-        SubirInfo.Instance.tablaUsuarios.observe(.childAdded) { (snapshot) in
+        SubirInfo.Instance.tablaFeed.observe(.childAdded) { (snapshot) in
             if let data = snapshot.value as? NSDictionary{
                 if let tipo_feed = data[Constantes.TIPO_FEED] as? String,
                     let is_gratis = data[Constantes.IS_GRATIS] as? Bool,
@@ -99,6 +99,61 @@ class BajarInfo {
                 }
             }else{
                 print("FEED 1")
+            }
+        }
+    }
+    
+    func bajarAsesoriaInfo(completion: @escaping (AsesoriaInfo) -> Void){
+        SubirInfo.Instance.tablaAsesoriaInfo.observe(.childAdded) { (snapshot) in
+            if let data = snapshot.value as? NSDictionary{
+                if let id_asesoria = data[Constantes.ID_ASESORIA] as? String,
+                    let imagen_portada = data[Constantes.IMAGEN_PORTADA] as? String,
+                    let descripcion_asesoria = data[Constantes.DESCRIPCION_ASESORIA] as? String{
+                    if let costo_asesoria = data[Constantes.COSTO_ASESORIA] as? String,
+                        let video_explicativo = data[Constantes.VIDEO_EXPLICATIVO] as? String,
+                        let rutinas_imagen = data[Constantes.RUTINAS_IMAGEN] as? String,
+                        let rutinas_descripcion = data[Constantes.RUTINAS_DESCRIPCION] as? String{
+                        if let alimentos_imagen = data[Constantes.ALIMENTOS_IMAGEN] as? String,
+                            let alimentos_descripcion = data[Constantes.ALIMENTOS_DESCRIPCION] as? String{
+                            completion(AsesoriaInfo(id_asesoria: id_asesoria, imagen_portada: imagen_portada, descripcion_asesoria: descripcion_asesoria, costo_asesoria: costo_asesoria, video_explicativo: video_explicativo, rutinas_imagen: rutinas_imagen, rutinas_descripcion: rutinas_descripcion, alimentos_imagen: alimentos_imagen, alimentos_descripcion: alimentos_descripcion))
+                        }else{
+                            print("ASESORIA INFO 4")
+                        }
+                    }else{
+                        print("ASESORIA INFO 3")
+                    }
+                }else{
+                    print("ASESORIA INFO 2")
+                }
+            }else{
+                print("ASESORIA INFO 1")
+            }
+        }
+    }
+    
+    func bajarValoracionesAsesoria(completion: @escaping (Valoraciones) -> Void){
+        SubirInfo.Instance.tablaValoraciones.observe(.childAdded) { (snapshot) in
+            if let data = snapshot.value as? NSDictionary{
+                if let id_usuario_valoracion = data[Constantes.ID_USUARIO_VALORACION] as? String,
+                    let id_valoracion = data[Constantes.ID_VALORACION] as? String,
+                    let descripcion_valoracion = data[Constantes.DESCRIPCION_VALORACION] as? String{
+                    if let fecha_valoracion = data[Constantes.FECHA_VALORACION] as? String,
+                        let imagen_antes = data[Constantes.IMAGEN_ANTES] as? String,
+                        let imagen_despues = data[Constantes.IMAGEN_DESPUES] as? String,
+                        let valoracion = data[Constantes.VALORACION] as? String{
+                        self.bajarUsuarios(completion: { (usuario) in
+                            if usuario.id_usuario == id_usuario_valoracion{
+                                completion(Valoraciones(id_usuario_valoracion: id_usuario_valoracion, id_valoracion: id_valoracion, descripcion_valoracion: descripcion_valoracion, fecha_valoracion: fecha_valoracion, imagen_antes: imagen_antes, imagen_despues: imagen_despues, valoracion: valoracion, nombre_usuario: usuario.nombre_usuario, foto_usuario: usuario.foto_usuario))
+                            }
+                        })
+                    }else{
+                        print("VALORACION 3")
+                    }
+                }else{
+                    print("VALORACION 2")
+                }
+            }else{
+                print("VALORACION 1")
             }
         }
     }

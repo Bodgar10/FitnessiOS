@@ -10,15 +10,11 @@ import UIKit
 
 class ValoracionImagenTVCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var fotoPerfil: UIImageView!
+    @IBOutlet weak var nombrePerfil: UILabel!
+    @IBOutlet weak var fechaPerfil: UILabel!
+    @IBOutlet weak var descripcionLabel: UILabel!
+    @IBOutlet weak var imagenAntes: UIImageView!
+    @IBOutlet weak var imagenDespues: UIImageView!
     
 }

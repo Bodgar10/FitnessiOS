@@ -76,7 +76,7 @@
         <!--Asesoría personalizada-->
         <scene sceneID="7jz-Kg-TiW">
             <objects>
-                <viewController id="dvH-Hb-pwm" sceneMemberID="viewController">
+                <viewController id="dvH-Hb-pwm" customClass="AsesoriaInfoVC" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uwv-qo-r9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,20 +208,21 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="srK-bm-qWH">
-                                                                <rect key="frame" x="8" y="238" width="327" height="204"/>
-                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEf-YU-SVC">
+                                                                <rect key="frame" x="0.0" y="230" width="343" height="220"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="srK-bm-qWH" secondAttribute="bottom" constant="8" id="5qS-qn-pXA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="CEf-YU-SVC" secondAttribute="trailing" id="3hB-fY-kUH"/>
                                                             <constraint firstAttribute="height" constant="450" id="7g3-lv-5XL"/>
+                                                            <constraint firstAttribute="bottom" secondItem="CEf-YU-SVC" secondAttribute="bottom" id="7oh-jc-grX"/>
                                                             <constraint firstAttribute="trailing" secondItem="nbv-Jl-WOj" secondAttribute="trailing" constant="8" id="I1X-ad-SSv"/>
                                                             <constraint firstItem="nbv-Jl-WOj" firstAttribute="top" secondItem="ygX-Wg-VxP" secondAttribute="top" constant="8" id="Zz9-OQ-g34"/>
-                                                            <constraint firstItem="srK-bm-qWH" firstAttribute="leading" secondItem="ygX-Wg-VxP" secondAttribute="leading" constant="8" id="iIl-Hc-NRs"/>
-                                                            <constraint firstItem="srK-bm-qWH" firstAttribute="top" secondItem="nbv-Jl-WOj" secondAttribute="bottom" constant="8" id="jfK-qw-JPi"/>
-                                                            <constraint firstAttribute="trailing" secondItem="srK-bm-qWH" secondAttribute="trailing" constant="8" id="mhm-ov-OfG"/>
                                                             <constraint firstItem="nbv-Jl-WOj" firstAttribute="leading" secondItem="ygX-Wg-VxP" secondAttribute="leading" constant="8" id="o4H-tf-uiU"/>
+                                                            <constraint firstItem="CEf-YU-SVC" firstAttribute="top" secondItem="nbv-Jl-WOj" secondAttribute="bottom" id="rhl-By-s5W"/>
+                                                            <constraint firstItem="CEf-YU-SVC" firstAttribute="leading" secondItem="ygX-Wg-VxP" secondAttribute="leading" id="sD3-1M-rTy"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -321,7 +322,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ujY-Yv-STZ">
                                                                 <rect key="frame" x="16" y="8" width="311" height="150"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diC-cT-USS">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diC-cT-USS" customClass="RoundView" customModule="Fitness" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="25" width="100" height="100"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VKF-kb-bJW">
@@ -349,6 +350,11 @@
                                                                             <constraint firstItem="VKF-kb-bJW" firstAttribute="centerY" secondItem="diC-cT-USS" secondAttribute="centerY" id="enk-Y2-t43"/>
                                                                             <constraint firstAttribute="height" constant="100" id="n8H-Kw-APG"/>
                                                                         </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o29-mI-1VM">
                                                                         <rect key="frame" x="108" y="0.0" width="203" height="150"/>
@@ -373,13 +379,13 @@
                                                                                 <rect key="frame" x="0.0" y="30" width="203" height="30"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-0P-hLX">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="24.5" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Twa-6P-DeN">
-                                                                                        <rect key="frame" x="27.5" y="0.0" width="177.5" height="31"/>
+                                                                                        <rect key="frame" x="3" y="0.0" width="202" height="31"/>
                                                                                         <color key="tintColor" red="0.73725490199999999" green="0.0" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </slider>
@@ -389,13 +395,13 @@
                                                                                 <rect key="frame" x="0.0" y="60" width="203" height="30"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE7-Nr-Ira">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="24.5" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0h3-kr-ZGh">
-                                                                                        <rect key="frame" x="27.5" y="0.0" width="177.5" height="31"/>
+                                                                                        <rect key="frame" x="3" y="0.0" width="202" height="31"/>
                                                                                         <color key="tintColor" red="0.73725490199999999" green="0.0" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </slider>
@@ -405,13 +411,13 @@
                                                                                 <rect key="frame" x="0.0" y="90" width="203" height="30"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5E-Yb-B7u">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="24.5" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7eB-S5-Ktm">
-                                                                                        <rect key="frame" x="27.5" y="0.0" width="177.5" height="31"/>
+                                                                                        <rect key="frame" x="3" y="0.0" width="202" height="31"/>
                                                                                         <color key="tintColor" red="0.73725490199999999" green="0.0" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </slider>
@@ -421,13 +427,13 @@
                                                                                 <rect key="frame" x="0.0" y="120" width="203" height="30"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmR-sg-Tkw">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="24.5" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-5s-O8r">
-                                                                                        <rect key="frame" x="27.5" y="0.0" width="177.5" height="31"/>
+                                                                                        <rect key="frame" x="3" y="0.0" width="202" height="31"/>
                                                                                         <color key="tintColor" red="0.73725490199999999" green="0.0" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </slider>
@@ -440,6 +446,10 @@
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o3D-5D-na1">
                                                                 <rect key="frame" x="0.0" y="166" width="343" height="334"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="dvH-Hb-pwm" id="Ubq-JV-wW8"/>
+                                                                    <outlet property="delegate" destination="dvH-Hb-pwm" id="HF5-EU-eRK"/>
+                                                                </connections>
                                                             </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -537,6 +547,29 @@
                     </view>
                     <navigationItem key="navigationItem" title="Asesoría personalizada" id="Fa6-Ow-k4c"/>
                     <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="alimentosImagen" destination="Xof-UH-wHI" id="8Fl-7x-cHY"/>
+                        <outlet property="cincoEstrellasSlider" destination="wbi-UO-MOR" id="HA3-aj-r79"/>
+                        <outlet property="cuatroEstrellasSlider" destination="Twa-6P-DeN" id="OYj-VI-A32"/>
+                        <outlet property="descripcionAlimentosLabel" destination="52K-Yy-odb" id="BRF-og-Gh4"/>
+                        <outlet property="descripcionAsesoriaLabel" destination="nbv-Jl-WOj" id="hdg-Pd-DGU"/>
+                        <outlet property="descripcionRutinasLabel" destination="RCN-ex-USg" id="c83-hr-JM2"/>
+                        <outlet property="dosEstrellasSlider" destination="7eB-S5-Ktm" id="cZn-nM-3A9"/>
+                        <outlet property="imagePerfilAdmin" destination="d0N-Oq-2UG" id="lC0-YQ-G6S"/>
+                        <outlet property="imagenPortada" destination="1Fa-vO-hy0" id="nqa-ho-vcJ"/>
+                        <outlet property="nameAdminLabel" destination="0ZA-rf-Rnd" id="ffy-W9-pQG"/>
+                        <outlet property="numAsesorias" destination="q0B-9A-z30" id="iHd-Ed-Cu8"/>
+                        <outlet property="numAsesoriasLabel" destination="ujG-gy-6Jo" id="6EA-gF-QAn"/>
+                        <outlet property="preciolabel" destination="ChM-wi-ohK" id="Ns6-4t-mtP"/>
+                        <outlet property="profesionAdminLabel" destination="DYr-Ds-9fj" id="GlU-sP-7pJ"/>
+                        <outlet property="rutinasImagen" destination="ap4-DL-KXh" id="Ejr-Jd-irS"/>
+                        <outlet property="tresEstrellasSlider" destination="0h3-kr-ZGh" id="lhn-s2-tj9"/>
+                        <outlet property="unaEstrellaSlider" destination="xEm-5s-O8r" id="TfJ-RY-Wsd"/>
+                        <outlet property="valoracionComentariosLabel" destination="aDF-nE-4XF" id="dCE-8G-IDe"/>
+                        <outlet property="valoracionLabel" destination="vsV-1x-laE" id="zXf-SW-6qj"/>
+                        <outlet property="valoracionesTableView" destination="o3D-5D-na1" id="WwN-q7-dg4"/>
+                        <outlet property="videoView" destination="CEf-YU-SVC" id="0yg-Fc-xXy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySr-EO-uxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

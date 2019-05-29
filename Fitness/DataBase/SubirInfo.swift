@@ -30,7 +30,39 @@ class SubirInfo{
     var tablaFeed: DatabaseReference{
         return dbRef.child(Constantes.TABLA_FEED)
     }
+    
+    var tablaAsesoriaInfo: DatabaseReference{
+        return dbRef.child(Constantes.TABLA_ASESORIA_INFO)
+    }
+    
+    var tablaValoraciones: DatabaseReference{
+        return dbRef.child(Constantes.TABLA_VALORACIONES_ASESORIA)
+    }
 
+    func crearAsesoria(id_asesoria: String, imagen_portada: String, descripcion_asesoria: String, costo_asesoria: String, video_explicativo: String, rutinas_imagen: String, rutinas_descripcion: String, alimentos_imagen: String, alimentos_descripcion: String){
+        let data: [String:Any] = [Constantes.ID_ASESORIA: id_asesoria,
+                                  Constantes.IMAGEN_PORTADA: imagen_portada,
+                                  Constantes.DESCRIPCION_ASESORIA: descripcion_asesoria,
+                                  Constantes.COSTO_ASESORIA: costo_asesoria,
+                                  Constantes.VIDEO_EXPLICATIVO: video_explicativo,
+                                  Constantes.RUTINAS_IMAGEN: rutinas_imagen,
+                                  Constantes.RUTINAS_DESCRIPCION: rutinas_descripcion,
+                                  Constantes.ALIMENTOS_IMAGEN: alimentos_imagen,
+                                  Constantes.ALIMENTOS_DESCRIPCION: alimentos_descripcion]
+        tablaAsesoriaInfo.childByAutoId().updateChildValues(data)
+    }
+    
+    func crearValoracion(id_usuario_valoracion: String, id_valoracion: String, descripcion_valoracion: String, fecha_valoracion: String, imagen_antes: String, imagen_despues: String, valoracion: String){
+        let data: [String:Any] = [Constantes.ID_USUARIO_VALORACION: id_usuario_valoracion,
+                                  Constantes.ID_VALORACION: id_valoracion,
+                                  Constantes.DESCRIPCION_VALORACION: descripcion_valoracion,
+                                  Constantes.FECHA_VALORACION: fecha_valoracion,
+                                  Constantes.IMAGEN_ANTES: imagen_antes,
+                                  Constantes.IMAGEN_DESPUES: imagen_despues,
+                                  Constantes.VALORACION: valoracion]
+        tablaValoraciones.childByAutoId().updateChildValues(data)
+    }
+    
     func crearFeed(tipo_feed: String, is_gratis: Bool, imagen_feed: String, costo_pdf: String, url_tipo: String,timestamp: String, descripcion: String){
         let data: [String:Any] = [Constantes.TIPO_FEED: tipo_feed,
                                   Constantes.IS_GRATIS: is_gratis,
