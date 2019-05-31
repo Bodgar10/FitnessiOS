@@ -33,6 +33,8 @@
 		23CE38A5228900470098FF2F /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CE38A4228900470098FF2F /* Feed.storyboard */; };
 		23CE38B1228901690098FF2F /* pdfFeedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE38AF228901690098FF2F /* pdfFeedTVCell.swift */; };
 		23CE38B2228901690098FF2F /* pdfFeedTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23CE38B0228901690098FF2F /* pdfFeedTVCell.xib */; };
+		23DC319122A0B83600CAFC70 /* ComprarAsesoriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC319022A0B83600CAFC70 /* ComprarAsesoriaVC.swift */; };
+		23DC319322A0BCF700CAFC70 /* Planes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC319222A0BCF700CAFC70 /* Planes.swift */; };
 		23E1B86A2283068F00F06D77 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B8692283068F00F06D77 /* Constantes.swift */; };
 		23E1B86C2283094200F06D77 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86B2283094200F06D77 /* Usuarios.swift */; };
 		23E1B86E22830A0A00F06D77 /* SubirInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B86D22830A0A00F06D77 /* SubirInfo.swift */; };
@@ -77,6 +79,8 @@
 		23CE38A4228900470098FF2F /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		23CE38AF228901690098FF2F /* pdfFeedTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfFeedTVCell.swift; sourceTree = "<group>"; };
 		23CE38B0228901690098FF2F /* pdfFeedTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pdfFeedTVCell.xib; sourceTree = "<group>"; };
+		23DC319022A0B83600CAFC70 /* ComprarAsesoriaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarAsesoriaVC.swift; sourceTree = "<group>"; };
+		23DC319222A0BCF700CAFC70 /* Planes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planes.swift; sourceTree = "<group>"; };
 		23E1B8692283068F00F06D77 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		23E1B86B2283094200F06D77 /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 		23E1B86D22830A0A00F06D77 /* SubirInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubirInfo.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				2393B042228CEA6500A23753 /* Feed.swift */,
 				23F4BB5C229E2A9300EA24AC /* AsesoriaInfo.swift */,
 				23F4BB5E229E2B1E00EA24AC /* Valoraciones.swift */,
+				23DC319222A0BCF700CAFC70 /* Planes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				23F4BB56229E197800EA24AC /* ValoracionTableViewCell.swift */,
 				23F4BB57229E197800EA24AC /* ValoracionTableViewCell.xib */,
 				23F4BB5A229E1BE500EA24AC /* AsesoriaInfoVC.swift */,
+				23DC319022A0B83600CAFC70 /* ComprarAsesoriaVC.swift */,
 			);
 			path = Asesoria;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				23EE267D229232B600E0F7FE /* PDFVC.swift in Sources */,
 				2300FCF52281B574005EDCD1 /* RoundButton.swift in Sources */,
 				23100BAC2285A4CC006B7651 /* RegistroVC.swift in Sources */,
+				23DC319122A0B83600CAFC70 /* ComprarAsesoriaVC.swift in Sources */,
 				2389EBF5227F6099009648A9 /* PantallaPrincipalVC.swift in Sources */,
 				23CE38B1228901690098FF2F /* pdfFeedTVCell.swift in Sources */,
 				23665AF62285212F00209AB4 /* IniciarSesionVC.swift in Sources */,
@@ -470,6 +477,7 @@
 				23EE267B22922A7600E0F7FE /* PDFBuyViewController.swift in Sources */,
 				2300FCEF2281B4E3005EDCD1 /* Extensions.swift in Sources */,
 				2300FCF72281B574005EDCD1 /* RoundTextView.swift in Sources */,
+				23DC319322A0BCF700CAFC70 /* Planes.swift in Sources */,
 				23112CEB228EDA9C00332927 /* MenuSinLoginVC.swift in Sources */,
 				2314CD7A228451C70025EFFA /* BajarInfo.swift in Sources */,
 				2300FCF42281B574005EDCD1 /* RoundView.swift in Sources */,

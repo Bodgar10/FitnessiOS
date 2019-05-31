@@ -59,4 +59,11 @@ class Constantes{
     public static let IMAGEN_ANTES = "imagen_antes"
     public static let IMAGEN_DESPUES = "imagen_despues"
     public static let VALORACION = "valoracion"
+    
+    public static let TABLA_PLANES = "planes"
+    public static let ID_PLAN = "id_plan"
+    public static let MESES_PLAN = "meses_plan"
+    public static let DESCRIPCION_PLAN = "descripcion_plan"
+    public static let COSTO_PLAN = "costo_plan"
+    
 }

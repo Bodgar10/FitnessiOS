@@ -157,5 +157,25 @@ class BajarInfo {
             }
         }
     }
+    
+    func bajarPlanes(completion: @escaping (Planes) -> Void){
+        SubirInfo.Instance.tablaPlanes.observe(.childAdded) { (snapshot) in
+            if let data = snapshot.value as? NSDictionary{
+                if let id_plan = data[Constantes.ID_USUARIO_VALORACION] as? String,
+                    let meses_plan = data[Constantes.ID_VALORACION] as? String,
+                    let descripcion_plan = data[Constantes.DESCRIPCION_VALORACION] as? String{
+                    if let costo_plan = data[Constantes.FECHA_VALORACION] as? String{
+                        completion(Planes(id_plan: id_plan, meses_plan: meses_plan, descripcion_plan: descripcion_plan, costo_plan: costo_plan))
+                    }else{
+                        print("VALORACION 3")
+                    }
+                }else{
+                    print("VALORACION 2")
+                }
+            }else{
+                print("VALORACION 1")
+            }
+        }
+    }
 
 }

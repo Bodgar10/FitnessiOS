@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AsesoriaInfoVC: UIViewController {
+class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var imagenPortada: UIImageView!
     
@@ -43,11 +43,32 @@ class AsesoriaInfoVC: UIViewController {
     
     var valoraciones: [Valoraciones] = []
     
+    var num = Int()
+    var valoration = Double()
+    var numReviews = 0
+    
+    var numReviews5 = 0
+    var numReviews4 = 0
+    var numReviews3 = 0
+    var numReviews2 = 0
+    var numReviews1 = 0
+    
+    let SEGUE_VIDEO = "video"
+    let SEGUE_COMPRAR = "comprar"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BajarInfo.Instance.bajarAsesoriaInfo { (asesoria) in
+        
+        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.addBottomSheetView()
+        
+        /*BajarInfo.Instance.bajarAsesoriaInfo { (asesoria) in
             self.imagenPortada.downloadImage(from: asesoria.imagen_portada)
             self.preciolabel.text = "$\(asesoria.costo_asesoria)"
             self.descripcionAsesoriaLabel.text = asesoria.descripcion_asesoria
@@ -65,10 +86,103 @@ class AsesoriaInfoVC: UIViewController {
         }
         
         self.valoraciones.removeAll()
+        var promedio = 0.0
         BajarInfo.Instance.bajarValoracionesAsesoria { (valoracion) in
             self.valoraciones.append(valoracion)
             self.valoracionesTableView.reloadData()
+            
+            
+            self.valoration += Double(valoracion.valoracion)!
+            self.num += 1
+            
+            promedio = self.valoration / Double(self.num)
+            print("VALORCION: \(promedio)")
+            self.valoracionLabel.text = "\(String(format: "%.2f", promedio))"
+            self.valoracionComentariosLabel.text = "\(String(format: "%.2f", promedio))"
+            
+            self.numReviews += 1
+            self.numAsesorias.text = "\(self.numReviews) Reviews"
+            
+            if valoracion.valoracion == "5"{
+                self.numReviews5 += 1
+                
+                let numReal = self.numReviews5/self.numReviews
+                self.cincoEstrellasSlider.value = Float(numReal)
+                
+            }else if valoracion.valoracion == "4"{
+                self.numReviews4 += 1
+                
+                let numReal = self.numReviews4/self.numReviews
+                self.cuatroEstrellasSlider.value = Float(numReal)
+            }else if valoracion.valoracion == "3"{
+                self.numReviews3 += 1
+                
+                let numReal = self.numReviews3/self.numReviews
+                self.tresEstrellasSlider.value = Float(numReal)
+            }else if valoracion.valoracion == "2"{
+                self.numReviews2 += 1
+                
+                let numReal = self.numReviews2/self.numReviews
+                self.dosEstrellasSlider.value = Float(numReal)
+            }else{
+                self.numReviews1 += 1
+                
+                let numReal = self.numReviews1/self.numReviews
+                self.unaEstrellaSlider.value = Float(numReal)
+            }
+        }*/
+    }
+    
+    func addBottomSheetView(scrollable: Bool? = false) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "comprar") as? ComprarAsesoriaVC {
+            //vc.pedido = self.pedido
+            
+            /*vc.removeFromParentViewController()
+             vc.willMove(toParentViewController: nil)
+             vc.view.removeFromSuperview()*/
+            
+            self.addChild(vc)
+            //vc.view.bringSubview(toFront: self.view)
+            self.view.addSubview(vc.view)
+            vc.didMove(toParent: self)
+            let height = CGFloat(1000.0)
+            let width  = view.frame.width
+            vc.view.frame = CGRect(x: 0, y: self.view.frame.maxX, width: width, height: height)
         }
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return self.valoraciones.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let valoracion = self.valoraciones[indexPath.row]
+        
+        if valoracion.imagen_antes == "nil"{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! ValoracionTableViewCell
+            
+            cell.imagenPerfil.downloadImage(from: valoracion.foto_usuario)
+            cell.nombrePerfil.text = valoracion.nombre_usuario
+            cell.descripcionLabel.text = valoracion.foto_usuario
+            cell.fechaPerfil.text = valoracion.fecha_valoracion
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! ValoracionImagenTVCell
+            
+            cell.fotoPerfil.downloadImage(from: valoracion.foto_usuario)
+            cell.nombrePerfil.text = valoracion.nombre_usuario
+            cell.descripcionLabel.text = valoracion.foto_usuario
+            cell.fechaPerfil.text = valoracion.fecha_valoracion
+            cell.imagenAntes.downloadImage(from: valoracion.imagen_antes)
+            cell.imagenDespues.downloadImage(from: valoracion.imagen_despues)
+            return cell
+        }
+    }
 }
