@@ -367,7 +367,7 @@
                         <outlet property="nombreTextField" destination="IiR-pB-F4i" id="HQq-jq-uoM"/>
                         <outlet property="registrarmeView" destination="Wdj-8I-L3m" id="lj6-cO-gOA"/>
                         <outlet property="telefonoTextField" destination="ogD-xb-L04" id="ubl-FX-DL8"/>
-                        <segue destination="fZI-wg-mYg" kind="show" identifier="registro" id="2be-1O-0sx"/>
+                        <segue destination="fZI-wg-mYg" kind="show" identifier="login" id="2be-1O-0sx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpF-N4-v2T" sceneMemberID="firstResponder"/>
@@ -569,7 +569,7 @@
                         <outlet property="emailTextField" destination="99a-b7-1bJ" id="6La-pz-6OX"/>
                         <outlet property="iniciarSesionView" destination="P4w-Fl-dmP" id="yW0-qY-PDt"/>
                         <outlet property="registrarmeView" destination="UjK-XB-jPq" id="xfG-Qa-eeI"/>
-                        <segue destination="HkH-BP-m0Q" kind="show" identifier="login" id="vd2-4T-zH0"/>
+                        <segue destination="HkH-BP-m0Q" kind="show" identifier="registro" id="vd2-4T-zH0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-OF-tOf" sceneMemberID="firstResponder"/>
@@ -578,7 +578,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tj1-el-FU4"/>
-        <segue reference="iQR-hy-qxa"/>
+        <segue reference="2be-1O-0sx"/>
+        <segue reference="vd2-4T-zH0"/>
     </inferredMetricsTieBreakers>
 </document>

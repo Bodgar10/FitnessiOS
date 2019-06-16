@@ -57,142 +57,183 @@ class MenuConLoginVC: UIViewController {
         
     }
 
-    @IBAction func didPressTab(_ sender: UIButton) {
-        if sender.tag == 0{
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
-                self.homeView.layer.cornerRadius = 15
-                self.homeView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-                self.homeView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
-                self.imageHome.isHidden = true
-                self.labelHome.isHidden = true
-                self.imageHomeEscondido.isHidden = false
-                
-                self.perfilView.layer.cornerRadius = 15
-                self.perfilView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imagePerfil.isHidden = true
-                self.labelPerfil.isHidden = false
-                self.imagePerfilEscondido.isHidden = false
-                
-                self.chatView.layer.cornerRadius = 15
-                self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imageChat.isHidden = true
-                self.labelChat.isHidden = false
-                self.imageChatEscondido.isHidden = false
-                
-                self.asesoriaView.layer.cornerRadius = 15
-                self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imageAsesoria.isHidden = true
-                self.labelAsesoria.isHidden = false
-                self.imageAsesoriaEscondido.isHidden = false
-            }) { (bool) in
-                
-            }
-        }else if sender.tag == 2{
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
-                self.perfilView.layer.cornerRadius = 15
-                self.perfilView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-                self.perfilView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
-                self.imagePerfil.isHidden = true
-                self.labelPerfil.isHidden = true
-                self.imagePerfilEscondido.isHidden = false
-                
-                self.homeView.layer.cornerRadius = 15
-                self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.homeView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imageHomeEscondido.isHidden = true
-                self.labelHome.isHidden = false
-                self.imageHome.isHidden = false
-                
-                self.asesoriaView.layer.cornerRadius = 15
-                self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imageAsesoriaEscondido.isHidden = true
-                self.labelAsesoria.isHidden = false
-                self.imageAsesoria.isHidden = false
-                
-                self.chatView.layer.cornerRadius = 15
-                self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                self.imageChatEscondido.isHidden = true
-                self.labelChat.isHidden = false
-                self.imageChat.isHidden = false
-            }) { (bool) in
-                
-            }
-        }else if sender.tag == 1{
-            self.asesoriaView.layer.cornerRadius = 15
-            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-            self.asesoriaView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
-            self.imageAsesoria.isHidden = true
-            self.labelAsesoria.isHidden = true
-            self.imageAsesoriaEscondido.isHidden = false
-            
-            self.homeView.layer.cornerRadius = 15
-            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.homeView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imageHomeEscondido.isHidden = true
-            self.labelHome.isHidden = false
-            self.imageHome.isHidden = false
-            
-            self.perfilView.layer.cornerRadius = 15
-            self.perfilView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imagePerfilEscondido.isHidden = true
-            self.labelPerfil.isHidden = false
-            self.imagePerfil.isHidden = false
-            
-            self.chatView.layer.cornerRadius = 15
-            self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imageChatEscondido.isHidden = true
-            self.labelChat.isHidden = false
-            self.imageChat.isHidden = false
-        }else{
-            self.chatView.layer.cornerRadius = 15
-            self.chatView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-            self.chatView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
-            self.imageChat.isHidden = true
-            self.labelChat.isHidden = true
-            self.imageChatEscondido.isHidden = false
-            
-            self.homeView.layer.cornerRadius = 15
-            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.homeView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imageHomeEscondido.isHidden = true
-            self.labelHome.isHidden = false
-            self.imageHome.isHidden = false
-            
-            self.perfilView.layer.cornerRadius = 15
-            self.perfilView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imagePerfilEscondido.isHidden = true
-            self.labelPerfil.isHidden = false
-            self.imagePerfil.isHidden = false
-            
-            self.asesoriaView.layer.cornerRadius = 15
-            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.imageAsesoriaEscondido.isHidden = true
-            self.labelAsesoria.isHidden = false
-            self.imageAsesoria.isHidden = false
-        }
-        let previousIndex = selectedIndex
-        selectedIndex = sender.tag
-        buttons[previousIndex].isSelected = false
-        let previousVC = viewControllers[previousIndex]
-        previousVC.willMove(toParent: nil)
-        previousVC.view.removeFromSuperview()
-        previousVC.removeFromParent()
-        sender.isSelected = true
-        let vc = viewControllers[selectedIndex]
+    @IBAction func buttonHome(_ sender: UIButton) {
+        
+        let vc = viewControllers[0]
         addChild(vc)
         vc.view.frame = contentView.bounds
         contentView.addSubview(vc.view)
         buttons[selectedIndex].isSelected = true
-        didPressTab(buttons[selectedIndex])
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.perfilView.layer.cornerRadius = 15
+            self.perfilView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
+            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.perfilView.layer.borderWidth = 1.0
+            self.imagePerfil.alpha = 0
+            self.labelPerfil.alpha = 0
+            self.imagePerfilEscondido.alpha = 1
+            
+            self.homeView.layer.cornerRadius = 15
+            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.homeView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
+            self.homeView.layer.borderWidth = 1.0
+            self.imageHomeEscondido.alpha = 0
+            self.labelHome.alpha = 1
+            self.imageHome.alpha = 1
+            
+            self.chatView.layer.cornerRadius = 15
+            self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderWidth = 1.0
+            self.imageChat.alpha = 0
+            self.labelChat.alpha = 0
+            self.imageChatEscondido.alpha = 1
+            
+            self.asesoriaView.layer.cornerRadius = 15
+            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderWidth = 1.0
+            self.imageAsesoria.alpha = 0
+            self.labelAsesoria.alpha = 0
+            self.imageAsesoriaEscondido.alpha = 1
+        }) { (bool) in
+            
+        }
     }
     
+    @IBAction func btnAsesoria(_ sender: UIButton) {
+        
+        let vc = viewControllers[1]
+        addChild(vc)
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        buttons[selectedIndex].isSelected = true
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.perfilView.layer.cornerRadius = 15
+            self.perfilView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
+            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.perfilView.layer.borderWidth = 1.0
+            self.imagePerfil.alpha = 0
+            self.labelPerfil.alpha = 0
+            self.imagePerfilEscondido.alpha = 1
+            
+            self.homeView.layer.cornerRadius = 15
+            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.homeView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
+            self.homeView.layer.borderWidth = 1.0
+            self.imageHomeEscondido.alpha = 1
+            self.labelHome.alpha = 0
+            self.imageHome.alpha = 0
+            
+            self.chatView.layer.cornerRadius = 15
+            self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderWidth = 1.0
+            self.imageChat.alpha = 0
+            self.labelChat.alpha = 0
+            self.imageChatEscondido.alpha = 1
+            
+            self.asesoriaView.layer.cornerRadius = 15
+            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderWidth = 1.0
+            self.imageAsesoria.alpha = 1
+            self.labelAsesoria.alpha = 1
+            self.imageAsesoriaEscondido.alpha = 0
+        }) { (bool) in
+            
+        }
+    }
+    
+    @IBAction func btnPerfil(_ sender: UIButton) {
+        
+        let vc = viewControllers[2]
+        addChild(vc)
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        buttons[selectedIndex].isSelected = true
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.perfilView.layer.cornerRadius = 15
+            self.perfilView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
+            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.perfilView.layer.borderWidth = 1.0
+            self.imagePerfil.alpha = 1
+            self.labelPerfil.alpha = 1
+            self.imagePerfilEscondido.alpha = 0
+            
+            self.homeView.layer.cornerRadius = 15
+            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.homeView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
+            self.homeView.layer.borderWidth = 1.0
+            self.imageHomeEscondido.alpha = 1
+            self.labelHome.alpha = 0
+            self.imageHome.alpha = 0
+            
+            self.chatView.layer.cornerRadius = 15
+            self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderWidth = 1.0
+            self.imageChat.alpha = 0
+            self.labelChat.alpha = 0
+            self.imageChatEscondido.alpha = 1
+            
+            self.asesoriaView.layer.cornerRadius = 15
+            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderWidth = 1.0
+            self.imageAsesoria.alpha = 0
+            self.labelAsesoria.alpha = 0
+            self.imageAsesoriaEscondido.alpha = 1
+        }) { (bool) in
+            
+        }
+    }
+    
+    @IBAction func btnChat(_ sender: UIButton) {
+        
+        let vc = viewControllers[3]
+        addChild(vc)
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        buttons[selectedIndex].isSelected = true
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.perfilView.layer.cornerRadius = 15
+            self.perfilView.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
+            self.perfilView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.perfilView.layer.borderWidth = 1.0
+            self.imagePerfil.alpha = 0
+            self.labelPerfil.alpha = 0
+            self.imagePerfilEscondido.alpha = 1
+            
+            self.homeView.layer.cornerRadius = 15
+            self.homeView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.homeView.layer.borderColor = #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1)
+            self.homeView.layer.borderWidth = 1.0
+            self.imageHomeEscondido.alpha = 1
+            self.labelHome.alpha = 0
+            self.imageHome.alpha = 0
+            
+            self.chatView.layer.cornerRadius = 15
+            self.chatView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.chatView.layer.borderWidth = 1.0
+            self.imageChat.alpha = 1
+            self.labelChat.alpha = 1
+            self.imageChatEscondido.alpha = 0
+            
+            self.asesoriaView.layer.cornerRadius = 15
+            self.asesoriaView.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.asesoriaView.layer.borderWidth = 1.0
+            self.imageAsesoria.alpha = 0
+            self.labelAsesoria.alpha = 0
+            self.imageAsesoriaEscondido.alpha = 1
+        }) { (bool) in
+            
+        }
+    }
 }

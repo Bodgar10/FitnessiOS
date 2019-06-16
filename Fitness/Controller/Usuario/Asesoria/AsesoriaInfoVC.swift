@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AsesoriaInfoVC: UITableViewController {
 
     @IBOutlet weak var imagenPortada: UIImageView!
     
@@ -38,8 +38,7 @@ class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tresEstrellasSlider: UISlider!
     @IBOutlet weak var dosEstrellasSlider: UISlider!
     @IBOutlet weak var unaEstrellaSlider: UISlider!
-    
-    @IBOutlet weak var valoracionesTableView: UITableView!
+    @IBOutlet weak var tableViewValoraciones: UITableView!
     
     var valoraciones: [Valoraciones] = []
     
@@ -54,19 +53,20 @@ class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     var numReviews1 = 0
     
     let SEGUE_VIDEO = "video"
-    let SEGUE_COMPRAR = "comprar"
+    //let SEGUE_COMPRAR = "comprar"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.tableViewValoraciones.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableViewValoraciones.separatorColor = UIColor.clear
         
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.addBottomSheetView()
+        //self.addBottomSheetView()
         
         /*BajarInfo.Instance.bajarAsesoriaInfo { (asesoria) in
             self.imagenPortada.downloadImage(from: asesoria.imagen_portada)
@@ -133,7 +133,7 @@ class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }*/
     }
     
-    func addBottomSheetView(scrollable: Bool? = false) {
+    /*func addBottomSheetView(scrollable: Bool? = false) {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "comprar") as? ComprarAsesoriaVC {
             //vc.pedido = self.pedido
@@ -150,19 +150,19 @@ class AsesoriaInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             let width  = view.frame.width
             vc.view.frame = CGRect(x: 0, y: self.view.frame.maxX, width: width, height: height)
         }
-    }
+    }*/
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.valoraciones.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let valoracion = self.valoraciones[indexPath.row]
         
         if valoracion.imagen_antes == "nil"{

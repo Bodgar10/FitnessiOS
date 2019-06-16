@@ -36,13 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.737254902, green: 0, blue: 0.09803921569, alpha: 1)
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         //UINavigationBar.appearance().shadowImage = UIColor.black.as1ptImage()
         
         UITabBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.737254902, green: 0, blue: 0.09803921569, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         
         //UINavigationBar.appearance().barStyle = .default
         

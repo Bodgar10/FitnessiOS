@@ -44,14 +44,14 @@ class PDFVC: UIViewController, PDFViewDelegate, PDFDocumentDelegate {
         textview.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         //Métodos de uso del PDF
-        let search = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(promptForSearch))
-        let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareSelection))
+        //let search = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(promptForSearch))
+        //let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareSelection))
         
-        let previous = UIBarButtonItem(barButtonSystemItem: .rewind, target: self.pdfView, action: #selector(PDFView.goToPreviousPage(_:)))
-        let next = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self.pdfView, action: #selector(PDFView.goToNextPage(_:)))
+        //let previous = UIBarButtonItem(barButtonSystemItem: .rewind, target: self.pdfView, action: #selector(PDFView.goToPreviousPage(_:)))
+        //let next = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self.pdfView, action: #selector(PDFView.goToNextPage(_:)))
         
-        
-        self.navigationItem.leftBarButtonItems = [search, share, previous, next]
+        //search, share,
+        //self.navigationItem.leftBarButtonItems = [previous, next]
         
         
         self.pdfView.autoScales = true
@@ -65,11 +65,13 @@ class PDFVC: UIViewController, PDFViewDelegate, PDFDocumentDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: pdfMode)
         self.navigationItem.rightBarButtonItem?.width = 160
         
+        self.load("PDF")
     }
     
     func load(_ name: String) {
         let path = self.pdfBuy.url_tipo
         
+        print("URL_PATH:\(path)")
         let url = NSURL(string: path!)
         //Cargar el PDF usando la clase PDFDocument, con una URL
         if let document = PDFDocument(url: url! as URL){

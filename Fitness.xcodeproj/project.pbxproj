@@ -33,6 +33,11 @@
 		23CE38A5228900470098FF2F /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CE38A4228900470098FF2F /* Feed.storyboard */; };
 		23CE38B1228901690098FF2F /* pdfFeedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE38AF228901690098FF2F /* pdfFeedTVCell.swift */; };
 		23CE38B2228901690098FF2F /* pdfFeedTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23CE38B0228901690098FF2F /* pdfFeedTVCell.xib */; };
+		23D5F49522B52B0F00B7B1A7 /* PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 23D5F49422B52B0F00B7B1A7 /* PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf */; };
+		23D5F49722B52B2B00B7B1A7 /* Aviso_de_Privacidad_LATAM.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 23D5F49622B52B2B00B7B1A7 /* Aviso_de_Privacidad_LATAM.pdf */; };
+		23D5F49922B52F8600B7B1A7 /* logoanimadorelpers.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 23D5F49822B52F8600B7B1A7 /* logoanimadorelpers.mp4 */; };
+		23D5F49B22B52F9F00B7B1A7 /* personajeverificacion.png in Resources */ = {isa = PBXBuildFile; fileRef = 23D5F49A22B52F9F00B7B1A7 /* personajeverificacion.png */; };
+		23D5F49D22B5959300B7B1A7 /* VideoFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5F49C22B5959300B7B1A7 /* VideoFeedVC.swift */; };
 		23DC319122A0B83600CAFC70 /* ComprarAsesoriaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC319022A0B83600CAFC70 /* ComprarAsesoriaVC.swift */; };
 		23DC319322A0BCF700CAFC70 /* Planes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC319222A0BCF700CAFC70 /* Planes.swift */; };
 		23E1B86A2283068F00F06D77 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1B8692283068F00F06D77 /* Constantes.swift */; };
@@ -79,6 +84,11 @@
 		23CE38A4228900470098FF2F /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		23CE38AF228901690098FF2F /* pdfFeedTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfFeedTVCell.swift; sourceTree = "<group>"; };
 		23CE38B0228901690098FF2F /* pdfFeedTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pdfFeedTVCell.xib; sourceTree = "<group>"; };
+		23D5F49422B52B0F00B7B1A7 /* PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf; sourceTree = "<group>"; };
+		23D5F49622B52B2B00B7B1A7 /* Aviso_de_Privacidad_LATAM.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Aviso_de_Privacidad_LATAM.pdf; sourceTree = "<group>"; };
+		23D5F49822B52F8600B7B1A7 /* logoanimadorelpers.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = logoanimadorelpers.mp4; sourceTree = "<group>"; };
+		23D5F49A22B52F9F00B7B1A7 /* personajeverificacion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personajeverificacion.png; sourceTree = "<group>"; };
+		23D5F49C22B5959300B7B1A7 /* VideoFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedVC.swift; sourceTree = "<group>"; };
 		23DC319022A0B83600CAFC70 /* ComprarAsesoriaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprarAsesoriaVC.swift; sourceTree = "<group>"; };
 		23DC319222A0BCF700CAFC70 /* Planes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planes.swift; sourceTree = "<group>"; };
 		23E1B8692283068F00F06D77 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
@@ -217,6 +227,10 @@
 		2389EBF1227F6099009648A9 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				23D5F49422B52B0F00B7B1A7 /* PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf */,
+				23D5F49622B52B2B00B7B1A7 /* Aviso_de_Privacidad_LATAM.pdf */,
+				23D5F49822B52F8600B7B1A7 /* logoanimadorelpers.mp4 */,
+				23D5F49A22B52F9F00B7B1A7 /* personajeverificacion.png */,
 				2300FCED2281B3A9005EDCD1 /* Storyboards */,
 				2300FCEC2281B398005EDCD1 /* Controller */,
 				2300FCEA2281B388005EDCD1 /* Model */,
@@ -242,6 +256,7 @@
 				23EE267A22922A7600E0F7FE /* PDFBuyViewController.swift */,
 				23EE267C229232B600E0F7FE /* PDFVC.swift */,
 				23EE267E2292482E00E0F7FE /* ShowImagenVC.swift */,
+				23D5F49C22B5959300B7B1A7 /* VideoFeedVC.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -337,6 +352,9 @@
 				2389EC00227F609B009648A9 /* LaunchScreen.storyboard in Resources */,
 				231648B5229BF6C900F92606 /* Asesoria.storyboard in Resources */,
 				2389EBFD227F609B009648A9 /* Assets.xcassets in Resources */,
+				23D5F49722B52B2B00B7B1A7 /* Aviso_de_Privacidad_LATAM.pdf in Resources */,
+				23D5F49522B52B0F00B7B1A7 /* PASE_MEDICO_BODGAR_JAIR_ESPINOSA_MIRANDA.pdf in Resources */,
+				23D5F49922B52F8600B7B1A7 /* logoanimadorelpers.mp4 in Resources */,
 				23CE38A5228900470098FF2F /* Feed.storyboard in Resources */,
 				2393B041228CDB4400A23753 /* videoFeedTVCell.xib in Resources */,
 				231648BA229C099D00F92606 /* ValoracionImagenTVCell.xib in Resources */,
@@ -344,6 +362,7 @@
 				2389EBF8227F6099009648A9 /* Login.storyboard in Resources */,
 				23112CED228EE10500332927 /* GoogleService-Info.plist in Resources */,
 				23F4BB59229E197800EA24AC /* ValoracionTableViewCell.xib in Resources */,
+				23D5F49B22B52F9F00B7B1A7 /* personajeverificacion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +487,7 @@
 				2300FCF62281B574005EDCD1 /* RoundTextField.swift in Sources */,
 				2393B043228CEA6500A23753 /* Feed.swift in Sources */,
 				2389EBF3227F6099009648A9 /* AppDelegate.swift in Sources */,
+				23D5F49D22B5959300B7B1A7 /* VideoFeedVC.swift in Sources */,
 				23F4BB5B229E1BE500EA24AC /* AsesoriaInfoVC.swift in Sources */,
 				23E1B86A2283068F00F06D77 /* Constantes.swift in Sources */,
 				23E1B86E22830A0A00F06D77 /* SubirInfo.swift in Sources */,
@@ -632,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SMR4FT2799;
 				INFOPLIST_FILE = Fitness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,7 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SMR4FT2799;
 				INFOPLIST_FILE = Fitness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

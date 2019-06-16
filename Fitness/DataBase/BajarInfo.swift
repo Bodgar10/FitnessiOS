@@ -22,6 +22,74 @@ class BajarInfo {
         return _instance
     }
     
+    func guardarImagenes(post: String, image: UIImage, name: String, completion: @escaping (String) -> Void){
+        let storage = Storage.storage().reference(forURL: "gs://fitnesapp-c714f.appspot.com/")
+        let Poststorage = storage.child(post)
+        let imageRef = Poststorage.child("\(name).jpg")
+        let data = image.jpegData(compressionQuality: 0.75)
+        let uploadTask = imageRef.putData(data!, metadata: nil) { (metadata, error) in
+            if error != nil {
+                //self.endActivityIndicator()
+                completion(Constantes.MESSAGE_FAIL)
+                //self.alert(title: "Hubo un error", message: "Inténtalo más tarde.")
+            }else {
+                //self.endActivityIndicator()
+                imageRef.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        completion("\(error!.localizedDescription)")
+                        print(error?.localizedDescription ?? "")
+                    }else {
+                        completion(url!.absoluteString)
+                    }
+                })
+            }
+        }
+        uploadTask.resume()
+    }
+    
+    func guardarPdf(post: String, pdf: String, name: String, completion: @escaping (String) -> Void){
+        let storage = Storage.storage().reference(forURL: "gs://fitnesapp-c714f.appspot.com/")
+        let Poststorage = storage.child(post)
+        let imageRef = Poststorage.child("\(name).pdf")
+        let data = URL(fileURLWithPath: Bundle.main.path(forResource: pdf, ofType: "pdf")!)
+        let uploadTask = imageRef.putFile(from: data, metadata: nil) { (metadata, error) in
+            if error != nil{
+                completion(error!.localizedDescription)
+            }else{
+                imageRef.downloadURL(completion: { (url, error) in
+                    if let error = error{
+                        completion(error.localizedDescription)
+                    }else if let url = url {
+                        completion(url.absoluteString)
+                    }
+                })
+            }
+        }
+        uploadTask.resume()
+    }
+    
+    func guardarVideo(post: String, video: String, name: String, completion: @escaping (String) -> Void){
+        let storage = Storage.storage().reference(forURL: "gs://fitnesapp-c714f.appspot.com/")
+        let Poststorage = storage.child(post)
+        let imageRef = Poststorage.child("\(name).mp4")
+        
+        let data = URL(fileURLWithPath: Bundle.main.path(forResource: video, ofType: "mp4")!)
+        let uploadTask = imageRef.putFile(from: data, metadata: nil) { (metadata, error) in
+            if error != nil{
+                completion(error!.localizedDescription)
+            }else{
+                imageRef.downloadURL(completion: { (url, error) in
+                    if let error = error{
+                        completion(error.localizedDescription)
+                    }else if let url = url {
+                        completion(url.absoluteString)
+                    }
+                })
+            }
+        }
+        uploadTask.resume()
+    }
+    
     func login(email_usuario: String, contrasena_usuario: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email_usuario, password: contrasena_usuario, completion: { (user, error) in
             if error != nil {
